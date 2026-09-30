@@ -13,7 +13,10 @@
 
 const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
 
+for (let i = 0; i < meetingTimes.length; i++) {
 
+console.log(`Vergadering om ${meetingTimes[i]}`);
+}
 // ==========================================
 // Opdracht 2. In tegenstelling tot Bob, werken de andere medewerkers van Loop-it Solutions wél hard.
 // Alle medewerkers hebben daarom zojuist 5% salarisverhoging gekregen. Om te voorkomen dat Bob dit handmatig moet aanpassen,
@@ -26,7 +29,14 @@ const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
 // ==========================================
 
 const salaries = [3200, 2350, 2800, 3500, 2800];
+const newSalaries = [];
 
+for (let i = 0; i < salaries.length; i++) {
+    let newSalary = salaries[i] * 1.05;
+    newSalaries.push(newSalary);
+}
+
+console.log(newSalaries);
 
 // ==========================================
 // Opdracht 3. Eén van Bob's taken is medewerkers feliciteren met hun "zoveelste" verjaardag.
@@ -38,7 +48,12 @@ const salaries = [3200, 2350, 2800, 3500, 2800];
 // ==========================================
 
 const birthYears = [1995, 1997, 1990, 2003, 1982];
+let age = []
 
+for (let i = 0; i < birthYears.length; i++) {
+    age.push(2025 - birthYears[i]);
+
+}console.log(age);
 
 // ==========================================
 // Opdracht 4. Bob houdt bij hoeveel verlofuren medewerkers per maand opnemen. Nu wil hij voor het nieuwe jaar een bonusstructuur toepassen:
@@ -51,8 +66,16 @@ const birthYears = [1995, 1997, 1990, 2003, 1982];
 // ==========================================
 
 const leaveHours = [6, 9, 2, 7, 3];
+let verlof =[]
+for (let i = 0; i < leaveHours.length; i++) {
+    if (leaveHours[i]%2 === 0)
+    {  verlof.push(leaveHours[i]*2);
+    }
+    else
+     {  verlof.push(leaveHours[i]*0.5);
+     }
 
-
+}console.log(verlof);
 // ==========================================
 // Opdracht 5 (BONUS). Na een dag bij Loop-it Solutions zit je er lekker in, tot je beseft dat één van de machines de
 // productiecodes verkeerd genereert en Bob deze altijd met de hand verbetert. Geen wonder dat er zo weinig werk verzet wordt...
@@ -69,4 +92,7 @@ const leaveHours = [6, 9, 2, 7, 3];
 
 const productionCodes = [" abC123  ", "  DEF456", "ghi789  ", "JKL012"];
 
+for (let i = 0; i < productionCodes.length; i++) {
+    productionCodes[i] = productionCodes[i].trim().toUpperCase();
+}console.log(productionCodes);
 
