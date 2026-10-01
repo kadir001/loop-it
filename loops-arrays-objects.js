@@ -23,6 +23,15 @@ const salaryDetails = [
 	{name: 'Otis', salary: 2800}
 ];
 
+for (let i = 0; i < salaryDetails.length; i++) {
+	const employee = salaryDetails[i];
+
+	console.log(
+		`Beste ${employee.name}, je salaris van €${employee.salary},- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.`
+	);
+}
+
+
 // ==========================================
 // Opdracht 2. Wanneer iemand een verlof-aanvraag doet, moet Bob eerst uit zijn hoofd uitrekenen of deze medewerker nog
 // voldoende vrije dagen over heeft voor de aanvraag. En dat gaat nog wel eens mis... Zorg ervoor dat het aantal vakantiedagen
@@ -43,7 +52,14 @@ const vacationDays = [
 	{name: 'Nina', totalVacationDays: 25, usedVacationDays: 5},
 	{name: 'Otis', totalVacationDays: 25, usedVacationDays: 7},
 ];
+for (let i = 0; i < vacationDays.length; i++) {
+	const employee = vacationDays[i];
 
+	employee.totalVacationDays = employee.totalVacationDays - employee.usedVacationDays;
+	console.log(
+		`${employee.name} heeft nog ${employee.totalVacationDays} vakantiedagen over.`
+	);
+}
 
 // ==========================================
 // Opdracht 3. Bob heeft een lijst van medewerkers en de opleidingen die ze volgen. Hij wil weten wie er een opleiding volgen
@@ -62,7 +78,12 @@ const employeesInTraining = [
 	{name: 'Nina', training: 'Teamworktraining', month: 'Maart'},
 	{name: 'Otis', training: 'Teamworktraining', month: 'Februari'},
 ];
-
+for (let i = 0; i < employeesInTraining.length; i++) {
+	const employee = employeesInTraining[i];
+	if (employeesInTraining[i].month === 'Januari') {
+		console.log(`${employeesInTraining[i].name}: ${employeesInTraining[i].training} `);
+	}
+}
 // ==========================================
 // Opdracht 4a. Medewerkers worden ieder jaar beoordeelt op hun functioneren. Het is aan Bob om de scores om te zetten
 // naar percentages en toe te voegen aan de adminstratie. Schrijf een script dat de score van iedere medewerker in de
@@ -89,6 +110,17 @@ const scores = [
 	{name: 'Otis', score: 100, salaryIncrease: null},
 ];
 
+for(let i = 0; i < scores.length; i++) {
+
+	if (scores[i].score === 100) { scores[i].salaryIncrease = 6;
+	}else if (scores[i].score >= 90 && scores[i].score <100) { scores[i].salaryIncrease = 4;
+	}else if (scores[i].score >= 70 && scores[i].score < 90 ) { scores[i].salaryIncrease = 3;
+	}else if (scores[i].score >= 60 && scores[i].score < 70) { scores[i].salaryIncrease = 2;
+	}else if (scores[i].score < 60) { scores[i].salaryIncrease = 0;}
+	console.log(`${scores[i].salaryIncrease}%`);
+
+}
+
 // ==========================================
 // Opdracht 4b. Breid je script uit door het percentage op te slaan in de 'salaryIncrease'-property van ieder object in de array.
 
@@ -103,8 +135,16 @@ const scores = [
 // 	{name: 'Otis', score: 100, salaryIncrease: '6%'},
 // ];
 // ==========================================
+for(let i = 0; i < scores.length; i++) {
 
+	if (scores[i].score === 100) { scores[i].salaryIncrease = '6%';
+	}else if (scores[i].score >= 90 && scores[i].score <100) { scores[i].salaryIncrease = '4%';
+	}else if (scores[i].score >= 70 && scores[i].score < 90 ) { scores[i].salaryIncrease = '3%';
+	}else if (scores[i].score >= 60 && scores[i].score < 70) { scores[i].salaryIncrease = '2%';
+	}else if (scores[i].score < 60) { scores[i].salaryIncrease = '0%';}
+	;
 
+}console.log(scores)
 
 // ==========================================
 // Opdracht 5. Bob wil ervoor zorgen dat al zijn medewerkers een correct bedrijfs-e-mailadres hebben. Deze e-mailadressen moeten
@@ -131,9 +171,22 @@ const employees = [
 	{firstName: 'Otis', lastName: 'Kuiper'},
 ];
 
+for (let i = 0; i < employees.length; i++) {
+	employees[i].email = `${employees[i].firstName}.${employees[i].lastName}@loop-it-solutions.nl`;
+}
+
+console.log(employees);
+
 // ==========================================
 // Opdracht 6 (BONUS). Bob wil dat alle e-mailadressen in kleine letters worden opgeslagen, zodat ze consistent zijn.
 // Kun je je script aanpassen om dit voor elkaar te krijgen? Dit heb je nog niet geleerd, maar Google is your best friend...
 // ==========================================
+
+
+for (let i = 0; i < employees.length; i++) {
+	employees[i].email =
+		`${employees[i].firstName}.${employees[i].lastName}@loop-it-solutions.nl`.toLowerCase();
+	console.log(employees);}
+
 
 
