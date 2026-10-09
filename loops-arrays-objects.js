@@ -112,11 +112,17 @@ const scores = [
 
 for(let i = 0; i < scores.length; i++) {
 
-	if (scores[i].score === 100) { scores[i].salaryIncrease = 6;
-	}else if (scores[i].score >= 90 && scores[i].score <100) { scores[i].salaryIncrease = 4;
-	}else if (scores[i].score >= 70 && scores[i].score < 90 ) { scores[i].salaryIncrease = 3;
-	}else if (scores[i].score >= 60 && scores[i].score < 70) { scores[i].salaryIncrease = 2;
-	}else if (scores[i].score < 60) { scores[i].salaryIncrease = 0;}
+	if (scores[i].score === 100) {
+		scores[i].salaryIncrease = 6;
+	}else if (scores[i].score >= 90 && scores[i].score <100) {
+		scores[i].salaryIncrease = 4;
+	}else if (scores[i].score >= 70 && scores[i].score < 90 ) {
+		scores[i].salaryIncrease = 3;
+	}else if (scores[i].score >= 60 && scores[i].score < 70) {
+		scores[i].salaryIncrease = 2;
+	}else if (scores[i].score < 60) {
+		scores[i].salaryIncrease = 0;
+	}
 	console.log(`${scores[i].salaryIncrease}%`);
 
 }
@@ -138,11 +144,15 @@ for(let i = 0; i < scores.length; i++) {
 for(let i = 0; i < scores.length; i++) {
 
 	if (scores[i].score === 100) { scores[i].salaryIncrease = '6%';
-	}else if (scores[i].score >= 90 && scores[i].score <100) { scores[i].salaryIncrease = '4%';
-	}else if (scores[i].score >= 70 && scores[i].score < 90 ) { scores[i].salaryIncrease = '3%';
-	}else if (scores[i].score >= 60 && scores[i].score < 70) { scores[i].salaryIncrease = '2%';
-	}else if (scores[i].score < 60) { scores[i].salaryIncrease = '0%';}
-	;
+	}else if (scores[i].score >= 90 && scores[i].score <100) {
+		scores[i].salaryIncrease = '4%';
+	}else if (scores[i].score >= 70 && scores[i].score < 90 ) {
+		scores[i].salaryIncrease = '3%';
+	}else if (scores[i].score >= 60 && scores[i].score < 70) {
+		scores[i].salaryIncrease = '2%';
+	}else if (scores[i].score < 60) {
+		scores[i].salaryIncrease = '0%';}
+
 
 }console.log(scores)
 
