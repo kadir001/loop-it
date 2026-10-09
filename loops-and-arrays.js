@@ -52,8 +52,8 @@ let age = []
 
 for (let i = 0; i < birthYears.length; i++) {
     age.push(2025 - birthYears[i]);
-
-}console.log(age);
+}
+console.log(age);
 
 // ==========================================
 // Opdracht 4. Bob houdt bij hoeveel verlofuren medewerkers per maand opnemen. Nu wil hij voor het nieuwe jaar een bonusstructuur toepassen:
@@ -66,16 +66,18 @@ for (let i = 0; i < birthYears.length; i++) {
 // ==========================================
 
 const leaveHours = [6, 9, 2, 7, 3];
-let verlof =[]
+let verlof =[];
 for (let i = 0; i < leaveHours.length; i++) {
     if (leaveHours[i]%2 === 0)
-    {  verlof.push(leaveHours[i]*2);
+    {
+        verlof.push(leaveHours[i]*2);
     }
     else
-     {  verlof.push(leaveHours[i]*0.5);
+     {
+         verlof.push(leaveHours[i]*0.5);
      }
-
-}console.log(verlof);
+}
+console.log(verlof);
 // ==========================================
 // Opdracht 5 (BONUS). Na een dag bij Loop-it Solutions zit je er lekker in, tot je beseft dat één van de machines de
 // productiecodes verkeerd genereert en Bob deze altijd met de hand verbetert. Geen wonder dat er zo weinig werk verzet wordt...
@@ -94,5 +96,6 @@ const productionCodes = [" abC123  ", "  DEF456", "ghi789  ", "JKL012"];
 
 for (let i = 0; i < productionCodes.length; i++) {
     productionCodes[i] = productionCodes[i].trim().toUpperCase();
-}console.log(productionCodes);   ///
+}
+console.log(productionCodes);   ///
 

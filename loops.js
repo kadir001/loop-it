@@ -26,7 +26,13 @@ for(let i = 1; i<=5; i++){
 // loop...
 // klaar!
 // ==========================================
-for (let i =2; i<=5; i++){console.log("loop...");if (i==5){console.log("klaar!");break;}}
+for (let i =1; i<=5; i++){
+    console.log("loop...");
+    if (i===4){
+        console.log("klaar!");
+        break;
+    }
+}
 
 // ==========================================
 // Opdracht 3. Maak een for-loop die automatisch factuurnummers genereert in het formaat INV-0001, INV-0002, enzovoorts. Zorg ervoor dat je begint bij nummer 1 en dat de nummers oplopen. Er zijn in totaal 8 factuurnummers nodig.
@@ -40,7 +46,9 @@ for (let i =2; i<=5; i++){console.log("loop...");if (i==5){console.log("klaar!")
 // 'INV-0006'
 // 'INV-0007'
 // 'INV-0008'
-for (let i =1; i<=8; i++){console.log("'INV-000"+i+"'");}
+for (let i =1; i<=8; i++){
+    console.log("'INV-000"+i+"'");
+}
 // ==========================================
 
 // ==========================================
@@ -98,7 +106,8 @@ for (let i =0; i<=9; i++){
     }
     if ( i >5 ){tekst = ">> ";
 
-    }console.log(tekst+ i);
+    }
+    console.log(tekst+ i);
 }
 // ==========================================
 // Opdracht 6 (BONUS). Schrijf een for-loop die van 0 tot 100 loopt en de getallen print.
@@ -138,10 +147,11 @@ for (let i =0; i<=9; i++){
 // etc.
 // ==========================================
 for (let i = 1; i<=100; i++){
-     if (i % 3 === 0 && i % 5===0) {console.log("FizzBuzz");continue;}
-    else if (i % 3 === 0) {console.log("Fizz");continue;}
-    else if (i % 5 === 0){console.log("Buzz");continue;
-    }console.log(i);
+     if (i % 3 === 0 && i % 5===0) {console.log("FizzBuzz"); }
+    else if (i % 3 === 0) {console.log("Fizz");}
+    else if (i % 5 === 0){console.log("Buzz");
+    }
+    console.log(i);
 
 }
 //
